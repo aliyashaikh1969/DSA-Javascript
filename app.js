@@ -28,7 +28,7 @@ const accessButton = document.querySelector('.access-btn')
 
 accessButton.addEventListener("click",()=>{
     let position = accessInput.value
-    if(position<array.length){
+    if(position<array.length && typeof position == "number"){
 
         console.log(array[position])
     }else{
