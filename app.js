@@ -1,6 +1,6 @@
 const arrays = document.querySelector(".arrays");
-const result = document.querySelector(".result");
-const arrlen = document.querySelector('.length')
+// const result = document.querySelector(".result");
+// const arrlen = document.querySelector('.length')
 
 
 let array = [12, 34, 32, 22, 12, 1, 4, 89, 112]
@@ -108,17 +108,75 @@ const searchInput = document.querySelector('.elemSearch');
 const searchPosition = document.querySelector('.searchPosition')
 
 
-searchBtn.addEventListener('click', () => {
-    // console.log(searchInput.value)
+// searchBtn.addEventListener('click', () => {
+//     // console.log(searchInput.value)
 
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i] == searchInput.value) {
+//             searchPosition.textContent = i
+//             console.log(i, array[i])
+//             break;
+//         } else {
+//             searchPosition.textContent = "not in the array"
+//         }
+//     }
+// searchInput.value = ""
+// })
+
+
+
+
+// merging arrays with the help of for loop nad while loop
+
+const array2 = document.querySelector('.array2')
+const forLoopBtn = document.querySelector(".for-loop")
+const whileLoopBtn = document.querySelector(".while-loop")
+let result = [];
+
+let array1 = [1, 3, 12, 54, 62, 9, 13]
+array2.textContent = `[${array1}]`
+
+
+forLoopBtn.addEventListener("click", () => {
+    console.log("forloop")
     for (let i = 0; i < array.length; i++) {
-        if (array[i] == searchInput.value) {
-            searchPosition.textContent = i
-            console.log(i, array[i])
-            break;
-        } else {
-            searchPosition.textContent = "not in the array"
-        }
-
+        console.log(i)
+        result[i] = array[i]
     }
+    for (let i = 0; i < array1.length; i++) {
+        console.log(i)
+        result[i + array.length] = array1[i]
+    }
+    console.log(result)
 })
+
+whileLoopBtn.addEventListener("click", () => {
+    console.log("whileloop")
+
+    let len1 = 0
+    let len2 = 0
+    let len3 = 0
+
+
+    while (len1 < array.length || len2 < array1.length) {
+        if (len1 < array.length) {
+            console.log("len1", len1, array[len1])
+            result[len1] = array[len1]
+            len1++
+        } else {
+            console.log("len2", len2 + array.length, array1[len2])
+            result[len2 + array.length] = array1[len2]
+
+            len2++
+        }
+        console.log(result)
+    }
+
+
+})
+
+
+
+
+
+
