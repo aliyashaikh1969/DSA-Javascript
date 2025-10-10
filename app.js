@@ -128,55 +128,91 @@ const searchPosition = document.querySelector('.searchPosition')
 
 // merging arrays with the help of for loop nad while loop
 
-const array2 = document.querySelector('.array2')
-const forLoopBtn = document.querySelector(".for-loop")
-const whileLoopBtn = document.querySelector(".while-loop")
-let result = [];
+// const array2 = document.querySelector('.array2')
+// const forLoopBtn = document.querySelector(".for-loop")
+// const whileLoopBtn = document.querySelector(".while-loop")
+// let result = [];
 
-let array1 = [1, 3, 12, 54, 62, 9, 13]
-array2.textContent = `[${array1}]`
-
-
-forLoopBtn.addEventListener("click", () => {
-    console.log("forloop")
-    for (let i = 0; i < array.length; i++) {
-        console.log(i)
-        result[i] = array[i]
-    }
-    for (let i = 0; i < array1.length; i++) {
-        console.log(i)
-        result[i + array.length] = array1[i]
-    }
-    console.log(result)
-})
-
-whileLoopBtn.addEventListener("click", () => {
-    console.log("whileloop")
-
-    let len1 = 0
-    let len2 = 0
-    let len3 = 0
+// let array1 = [1, 3, 12, 54, 62, 9, 13]
+// array2.textContent = `[${array1}]`
 
 
-    while (len1 < array.length || len2 < array1.length) {
-        if (len1 < array.length) {
-            console.log("len1", len1, array[len1])
-            result[len1] = array[len1]
-            len1++
-        } else {
-            console.log("len2", len2 + array.length, array1[len2])
-            result[len2 + array.length] = array1[len2]
+// forLoopBtn.addEventListener("click", () => {
+//     console.log("forloop")
+//     for (let i = 0; i < array.length; i++) {
+//         console.log(i)
+//         result[i] = array[i]
+//     }
+//     for (let i = 0; i < array1.length; i++) {
+//         console.log(i)
+//         result[i + array.length] = array1[i]
+//     }
+//     console.log(result)
+// })
 
-            len2++
+// whileLoopBtn.addEventListener("click", () => {
+//     console.log("whileloop")
+
+//     let len1 = 0
+//     let len2 = 0
+//     let len3 = 0
+
+
+//     while (len1 < array.length || len2 < array1.length) {
+//         if (len1 < array.length) {
+//             console.log("len1", len1, array[len1])
+//             result[len1] = array[len1]
+//             len1++
+//         } else {
+//             console.log("len2", len2 + array.length, array1[len2])
+//             result[len2 + array.length] = array1[len2]
+
+//             len2++
+//         }
+//         console.log(result)
+//     }
+
+
+// })
+
+
+// sort an arrays with the help of for loop and while loop
+
+const arraySorting = document.querySelector(".array-sorting")
+const forLoopSortBtn = document.querySelector(".for-loop-sort")
+const whileLoopSortBtn = document.querySelector(".while-loop-sort");
+
+
+// forLoopSortBtn.addEventListener("click",()=>{
+//     for(let i = 0 ; i<array.length;i++){
+//         for(let j =0 ;j<array.length;j++){
+//             if(array[j]>array[j+1]){
+//                 let swap = array[j]
+//                 array[j] = array[j+1];
+//                 array[j+1]= swap
+//             }
+//         }
+//     }
+//     console.log(array)
+//     arraySorting.innerHTML = `[${array}]`
+// })
+
+
+whileLoopSortBtn.addEventListener("click", () => {
+    let i = 0
+    while (i < array.length) {
+        let j = 0
+        while (j < array.length) {
+
+            if (array[j] > array[j + 1]) {
+                let swap = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = swap
+            }
+            j++
         }
-        console.log(result)
+        i++;
     }
 
-
+    console.log(array)
 })
-
-
-
-
-
-
