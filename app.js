@@ -5,7 +5,7 @@ const arrays = document.querySelector(".arrays");
 
 let array = [12, 34, 32, 22, 12, 1, 4, 89, 112]
 // let array = [1,2,3,4]
-arrays.innerHTML = `[${array}]`
+// arrays.innerHTML = `[${array}]`
 
 
 // array traverse
@@ -198,21 +198,44 @@ const whileLoopSortBtn = document.querySelector(".while-loop-sort");
 // })
 
 
-whileLoopSortBtn.addEventListener("click", () => {
-    let i = 0
-    while (i < array.length) {
-        let j = 0
-        while (j < array.length) {
+// whileLoopSortBtn.addEventListener("click", () => {
+//     let i = 0
+//     while (i < array.length) {
+//         let j = 0
+//         while (j < array.length) {
 
-            if (array[j] > array[j + 1]) {
-                let swap = array[j];
-                array[j] = array[j + 1];
-                array[j + 1] = swap
-            }
-            j++
-        }
-        i++;
+//             if (array[j] > array[j + 1]) {
+//                 let swap = array[j];
+//                 array[j] = array[j + 1];
+//                 array[j + 1] = swap
+//             }
+//             j++
+//         }
+//         i++;
+//     }
+
+//     console.log(array)
+// })
+
+
+
+ 
+
+// RECURSION BASIC
+
+
+let rupess = 100
+let totalApple = 0
+let appleMRP = 20
+
+
+function buyingApple(){
+    if(rupess>0){
+        rupess = rupess-appleMRP
+        totalApple++
+        console.log("total apple :",totalApple,"rupess remaining",rupess)
+        buyingApple(rupess)
     }
+}
+buyingApple()
 
-    console.log(array)
-})
