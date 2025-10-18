@@ -224,18 +224,38 @@ const whileLoopSortBtn = document.querySelector(".while-loop-sort");
 // RECURSION BASIC
 
 
-let rupess = 100
-let totalApple = 0
-let appleMRP = 20
+// let rupess = 100
+// let totalApple = 0
+// let appleMRP = 20
 
 
-function buyingApple(){
-    if(rupess>0){
-        rupess = rupess-appleMRP
-        totalApple++
-        console.log("total apple :",totalApple,"rupess remaining",rupess)
-        buyingApple(rupess)
+// function buyingApple(){
+//     if(rupess>0){
+//         rupess = rupess-appleMRP
+//         totalApple++
+//         console.log("total apple :",totalApple,"rupess remaining",rupess)
+//         buyingApple(rupess)
+//     }
+// }
+// buyingApple()
+
+
+
+
+function factorial(num){
+    if(num==0){
+        return 1
     }
+    return num*factorial(num-1)
 }
-buyingApple()
+
+console.log(factorial(5))
+
+
+
+
+
+// factorial(5)
+
+// indirect recursion
 
