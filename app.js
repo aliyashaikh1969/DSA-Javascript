@@ -219,7 +219,7 @@ const whileLoopSortBtn = document.querySelector(".while-loop-sort");
 
 
 
- 
+
 
 // RECURSION BASIC
 
@@ -242,14 +242,14 @@ const whileLoopSortBtn = document.querySelector(".while-loop-sort");
 
 
 
-function factorial(num){
-    if(num==0){
-        return 1
-    }
-    return num*factorial(num-1)
-}
+// function factorial(num){
+//     if(num==0){
+//         return 1
+//     }
+//     return num*factorial(num-1)
+// }
 
-console.log(factorial(5))
+// console.log(factorial(5))
 
 
 
@@ -259,3 +259,19 @@ console.log(factorial(5))
 
 // indirect recursion
 
+let totalRuppes = 100
+let totalApple = 0
+function one(){
+    console.log(totalRuppes,totalApple)
+    if(totalRuppes>0){
+        two()
+    }   
+}
+
+function two(){
+    totalRuppes = totalRuppes-20
+    totalApple++
+    one()
+}
+
+one()
