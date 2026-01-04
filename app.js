@@ -5,7 +5,7 @@ const arrays = document.querySelector(".arrays");
 
 let array = [12, 34, 32, 22, 12, 1, 4, 89, 112]
 // let array = [1,2,3,4]
-// arrays.innerHTML = `[${array}]`
+arrays.innerHTML = `[${array}]`
 
 
 // array traverse
@@ -259,8 +259,8 @@ const whileLoopSortBtn = document.querySelector(".while-loop-sort");
 
 // indirect recursion
 
-let totalRuppes = 100
-let totalApple = 0
+// let totalRuppes = 100
+// let totalApple = 0
 function one(){
     console.log(totalRuppes,totalApple)
     if(totalRuppes>0){
@@ -274,4 +274,19 @@ function two(){
     one()
 }
 
-one()
+// one()
+
+let temp = "";
+
+function arrayReversing(data,start,end){
+    console.log(data)
+    if(start<=end){
+        temp=data[start]
+        data[start] = data[end]
+        data[end] = temp
+        arrayReversing(data,start+1,end-1)
+    }
+
+}
+
+arrayReversing(array,0,array.length-1)
